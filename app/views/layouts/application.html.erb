@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>JourneyOfATShirt</title>
+  <title>Journey of a T-Shirt</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
 </head>
 <body>
+<div class="container">
+  <%= yield %>
+  <br>
 
-<%= yield %>
-
+    <%= yield :charts_js %>
+  <strong><%= flash[:notice] %></strong>
+  <hr>
+  <nav class="navbar">
+    <strong> Journey of a T-Shirt (insert cute icon here) <%= link_to "Home", root_path %> |
+    <%= link_to "Where It Came From", countries_path %> </strong>
+    <%= yield(:nav) %>
+  </nav>
+</div>
 </body>
 </html>
