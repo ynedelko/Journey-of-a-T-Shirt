@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @country.name %>
+</p>
+
+<p>
+  <strong>Us imports:</strong>
+  <%= @country.us_imports %>
+</p>
+
+<p>
+  <strong>Min wage:</strong>
+  <%= @country.min_wage %>
+</p>
+
+<p>
+  <strong>Poverty:</strong>
+  <%= @country.poverty %>
+</p>
+
+<p>
+  <strong>Education:</strong>
+  <%= @country.education %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @country.image %>
+</p>
+
+<%= link_to 'Edit', edit_country_path(@country) %> |
+<%= link_to 'Back', countries_path %>
