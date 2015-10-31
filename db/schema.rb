@@ -11,16 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151030224649) do
+ActiveRecord::Schema.define(version: 20151031011009) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "countries", force: :cascade do |t|
     t.string   "name"
-    t.integer  "us_imports"
+    t.decimal  "us_imports"
     t.integer  "min_wage"
-    t.integer  "poverty"
+    t.decimal  "poverty"
     t.integer  "education"
     t.string   "image"
     t.datetime "created_at", null: false

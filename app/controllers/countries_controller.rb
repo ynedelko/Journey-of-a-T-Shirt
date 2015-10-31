@@ -4,6 +4,7 @@ class CountriesController < ApplicationController
   # GET /countries
   def index
     @countries = Country.all
+    @import_order_countries = Country.order(us_imports: :desc).all
   end
 
   # GET /countries/1
