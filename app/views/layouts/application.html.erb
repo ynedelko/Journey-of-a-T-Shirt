@@ -11,15 +11,15 @@
 <div class="container">
   <%= yield %>
   <br>
-
     <%= yield :charts_js %>
   <strong><%= flash[:notice] %></strong>
-  <hr>
-  <nav class="navbar">
+  <footer class="site-footer">
     <strong> Journey of a T-Shirt (insert cute icon here) <%= link_to "Home", root_path %> |
     <%= link_to "Where It Came From", countries_path %> </strong>
     <%= yield(:nav) %>
-  </nav>
+    <br>
+  </footer>
 </div>
+
 </body>
 </html>

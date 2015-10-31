@@ -2,15 +2,12 @@
 
 <h1>Listing Countries</h1>
 
-<table>
+<table class="table table-hover">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Us imports</th>
-      <th>Min wage</th>
-      <th>Poverty</th>
-      <th>Education</th>
-      <th>Image</th>
+      <th>Country</th>
+      <th>Imported Apparel by US ($ Billions)</th>
+      <th>People Living Below $1.90 a day (% of Population)</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,20 +15,16 @@
   <tbody>
     <% @countries.each do |country| %>
       <tr>
-        <td><%= country.name %></td>
+        <td><%= link_to country.name, country_path(country) %></td>
         <td><%= country.us_imports %></td>
-        <td><%= country.min_wage %></td>
         <td><%= country.poverty %></td>
-        <td><%= country.education %></td>
-        <td><%= country.image %></td>
-        <td><%= link_to 'Show', country %></td>
-        <td><%= link_to 'Edit', edit_country_path(country) %></td>
-        <td><%= link_to 'Destroy', country, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_country_path(country) %> |
+            <%= link_to 'Destroy', country, method: :delete %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
+<br>
 <%= link_to 'New Country', new_country_path %>
