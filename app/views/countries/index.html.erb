@@ -28,3 +28,5 @@
 <br>
 <br>
 <%= link_to 'New Country', new_country_path %>
+<br>
+<%= geo_chart @countries.group(:name).sum(:us_imports) %>
