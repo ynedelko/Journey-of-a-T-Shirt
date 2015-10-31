@@ -35,7 +35,6 @@ group :test do
   gem 'simplecov', require: false
   gem 'poltergeist'
   gem 'selenium-webdriver'
-
 end
 
 group :production do
