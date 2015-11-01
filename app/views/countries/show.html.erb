@@ -1,27 +1,33 @@
-<p>
-  <strong>Name:</strong>
-  <%= @country.name %>
-</p>
-<p>
-  <strong>Us imports:</strong>
-  <%= @country.us_imports %>
-</p>
-<p>
-  <strong>Min wage:</strong>
-  <%= @country.min_wage %>
-</p>
-<p>
-  <strong>Poverty:</strong>
-  <%= @country.poverty %>
-</p>
-<p>
-  <strong>Education:</strong>
-  <%= @country.education %>
-</p>
-<p>
-  <strong>Image:</strong>
-  <%= @country.image %>
-</p>
+<center>
+  <h1>
+    <%= @country.name %>
+  </h1>
+    <%= image_tag("#{@country.image}") %>
+</center>
 
+<div class="row">
+  <div class="col-md-8">
+    <h2>Imports</h2>
+    <h2>Imports $<%= @country.us_imports %> billion worth of apparel into the United States each year.</h2>
+  </div>
+  <div class="col-md-4">
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+  </div>
+  <div class="col-md-8">
+    <h2>Wages</h2>
+    <h2>The monthly minimum wage for garmet workers is equivalent to $<%= @country.min_wage %> US Dollars.</h2>
+    <h2><%= @country.poverty %>% of <%= @country.name %>'s population lives on less than $1.90 US Dollars.</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-8">
+    <h2>Education</h2>
+    <h2><%= @country.education %>% of <%= @country.name %>'s population has at least a high school level education.</h2></div>
+  <div class="col-md-4">
+  </div>
+</div>
 <%= link_to 'Edit', edit_country_path(@country) %> |
 <%= link_to 'Back', countries_path %>
