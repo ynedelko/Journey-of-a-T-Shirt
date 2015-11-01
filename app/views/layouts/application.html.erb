@@ -16,7 +16,7 @@
   <strong><%= flash[:notice] %></strong>
   <footer class="site-footer">
     <strong> Journey of a T-Shirt (insert cute icon here) <%= link_to "Home", root_path %> |
-    <%= link_to "Where It Came From", countries_path %> </strong>
+    <%= link_to "Where It Came From", countries_path %> | <%= link_to "Your T-Shirt", visitors_path %> </strong>
     <%= yield(:nav) %>
     <br>
   </footer>
