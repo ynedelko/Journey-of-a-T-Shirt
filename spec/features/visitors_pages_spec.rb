@@ -5,9 +5,9 @@ describe "add a visitors answer process" do
     visit visitors_path
     click_on "Add Answer"
     fill_in "Name", :with => "Larry"
-    fill_in "Tshirt made", :with => "Pakistan"
+    select('China', :from => 'Tshirt made')
     fill_in "Comment", :with => "Woah!"
     click_on "Create Visitor"
-    expect(page).to have_content("Pakistan")
+    expect(page).to have_content("China")
   end
 end
