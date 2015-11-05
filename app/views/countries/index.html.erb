@@ -1,6 +1,19 @@
 <center>
-<h1>The US imports over <strong>$80 Billion</strong> of apparel each year.</h1>
-<br>
+<h1>Check your tag <%= image_tag "tag.png", size: '50x50' %></h1>
+<h2>Did you guess correctly?</h2>
+<h2>Where is your T-shirt actually from?</h2>
+<%= link_to 'Add Answer', new_visitor_path, id: "add_visitor_answer_link", remote: true, class: "btn btn-sm btn-info" %>
+<h4>You'll see everyone's results at the end.</h4>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<h1>As a country, we import over <h1>
+  <strong>$80 Billion</strong>
+  <h1>of apparel EACH year.</h1>
+  <%= image_tag "money.png", size: '100x100' %>
 <h2>Top 10 Countries of Apparel Imports to US</h2>
 <h2>$US in Billions - 2014</h2>
 <div class="row">
@@ -27,15 +40,14 @@
       </tr>
     <% end %>
   </tbody>
+  <%= link_to 'New Country', new_country_path, id: "new_country_link", remote: true, class: "btn btn-sm btn-info" %>
 </table>
-<p>Click on any country to learn more.</p>
 </div>
 </div>
 <br>
-<h1>Check your tag <%= image_tag "tag.png", size: '50x50' %></h1>
-<h2>Is your T-shirt from one of the top exporters?</h2>
+<h1>Need so insert the option to select a country and learn more about it</h1>
 </center>
 <br>
 <br>
-<%= link_to 'New Country', new_country_path, id: "new_country_link", remote: true, class: "btn btn-sm btn-info" %>
+
 <br>

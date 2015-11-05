@@ -1,7 +1,7 @@
-
-<h1>Please tell us where your T-Shirt came from:</h1>
-<%= link_to 'Add Answer', new_visitor_path, id: "add_visitor_answer_link", remote: true, class: "btn btn-sm btn-info" %>
-
+<center>
+<h1>Today's visitors have T-Shirts from all over the world.</h1>
+<%= pie_chart Visitor.group(:tshirt_made).count %>
+<br>
 <table class="table table-condensed">
   <thead>
     <tr>
@@ -24,6 +24,4 @@
       <% end %>
   </tbody>
 </table>
-<br>
-<h3>Today's visitors have T-Shirts from all over the world.</h3>
-<%= pie_chart Visitor.group(:tshirt_made).count %>
+</center>

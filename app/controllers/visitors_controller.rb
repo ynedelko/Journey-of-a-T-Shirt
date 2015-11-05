@@ -3,7 +3,7 @@ class VisitorsController < ApplicationController
 
   # GET /visitors
   def index
-    @visitors = Visitor.all
+    @visitors = Visitor.order(tshirt_made: :asc).all
   end
 
   # GET /visitors/1
@@ -24,7 +24,7 @@ class VisitorsController < ApplicationController
     @visitor = Visitor.new(visitor_params)
 
     if @visitor.save
-      redirect_to visitors_path, notice: 'Visitor was successfully created.'
+      redirect_to countries_path, notice: 'Visitor was successfully created.'
     else
       render :new
     end
