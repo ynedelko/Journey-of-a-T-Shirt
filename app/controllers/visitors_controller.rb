@@ -24,7 +24,7 @@ class VisitorsController < ApplicationController
     @visitor = Visitor.new(visitor_params)
 
     if @visitor.save
-      redirect_to countries_path, notice: 'Visitor was successfully created.'
+      redirect_to countries_path, notice: 'Thank you for your guess.'
     else
       render :new
     end
@@ -33,7 +33,7 @@ class VisitorsController < ApplicationController
   # PATCH/PUT /visitors/1
   def update
     if @visitor.update(visitor_params)
-      redirect_to visitors_path, notice: 'Visitor was successfully updated.'
+      redirect_to countries_path, notice: 'Thank you for your answer.'
     else
       render :edit
     end

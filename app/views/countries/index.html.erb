@@ -1,9 +1,19 @@
 <center>
+
+<h2>Where do you think your T-shirt is from?</h2>
+<%= link_to 'GUESS', new_visitor_path, id: "add_visitor_answer_link", remote: true, class: "btn btn-sm btn-info" %>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
 <h1>Check your tag <%= image_tag "tag.png", size: '50x50' %></h1>
 <h2>Did you guess correctly?</h2>
-<h2>Where is your T-shirt actually from?</h2>
-<%= link_to 'Add Answer', new_visitor_path, id: "add_visitor_answer_link", remote: true, class: "btn btn-sm btn-info" %>
-<h4>You'll see everyone's results at the end.</h4>
+  <% @single_visitor.each do |visitor| %>
+      <%= link_to 'ENTER WHERE IT WAS ACTUALLY MADE', edit_visitor_path(visitor), id: "edit_visitor_answer_link", remote: true, class: "btn btn-lg btn-info" %>
+      <% end %>
+<h4>You'll see everyone's results at the bottom.</h4>
 <li></li>
 <li></li>
 <li></li>
@@ -45,7 +55,7 @@
 </div>
 </div>
 <br>
-<h1>Need so insert the option to select a country and learn more about it</h1>
+<h1>Select the country your T-shirt was made (or another country) to learn more about it</h1>
 </center>
 <br>
 <br>

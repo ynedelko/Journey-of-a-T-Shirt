@@ -1,0 +1,22 @@
+<h1>Where It's Really Made</h1>
+
+<%= form_for(@visitor) do |f| %>
+  <% if @visitor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@visitor.errors.count, "error") %> prohibited this answer from being saved:</h2>
+
+      <ul>
+      <% @visitor.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :comment, "Where was your T-shirt ACTUALLY made?"%><br>
+    <%= f.select :comment, ['China', 'Vietnam', 'Bangladesh', 'Indonesia', 'Mexico', 'India', 'Honduras', 'Cambodia', 'El Salvador', 'Sri Lanka', 'United States', 'Second-Hand', 'Hand-Made', 'Other'] %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Submit Answer", class: "btn btn-xs btn-info" %>
+  </div>
+<% end %>

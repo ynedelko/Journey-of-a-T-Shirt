@@ -19,11 +19,7 @@
     <%= f.label :tshirt_made, "Where was your T-shirt made?"%><br>
     <%= f.select :tshirt_made, ['China', 'Vietnam', 'Bangladesh', 'Indonesia', 'Mexico', 'India', 'Honduras', 'Cambodia', 'El Salvador', 'Sri Lanka', 'United States', 'Second-Hand', 'Hand-Made', 'Other'] %>
   </div>
-  <div class="field">
-    <%= f.label :comment, "Comment (optional)"%><br>
-    <%= f.text_area :comment %>
-  </div>
   <div class="actions">
-    <%= f.submit "Submit Answer", class: "btn btn-xs btn-info" %>
+    <%= f.submit "Submit Guess", class: "btn btn-xs btn-info" %>
   </div>
 <% end %>
