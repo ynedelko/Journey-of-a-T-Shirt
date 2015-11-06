@@ -1,63 +1,12 @@
 <center>
-
+<h1>Time to Take a Guess!</h1>
+<h1>PIC</h1>
 <h2>Where do you think your T-shirt is from?</h2>
-<%= link_to 'GUESS', new_visitor_path, id: "add_visitor_answer_link", remote: true, class: "btn btn-sm btn-info" %>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<h1>Check your tag <%= image_tag "tag.png", size: '50x50' %></h1>
-<h2>Did you guess correctly?</h2>
-  <% @single_visitor.each do |visitor| %>
-      <%= link_to 'ENTER WHERE IT WAS ACTUALLY MADE', edit_visitor_path(visitor), id: "edit_visitor_answer_link", remote: true, class: "btn btn-lg btn-info" %>
-      <% end %>
-<h4>You'll see everyone's results at the bottom.</h4>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<h1>As a country, we import over <h1>
-  <strong>$80 Billion</strong>
-  <h1>of apparel EACH year.</h1>
-  <%= image_tag "money.png", size: '100x100' %>
-<h2>Top 10 Countries of Apparel Imports to US</h2>
-<h2>$US in Billions - 2014</h2>
-<div class="row">
-  <div class="col-md-8">
-  <%= geo_chart @countries.group(:name).sum(:us_imports), colors: ["#33C1FF", "#008ED6"] %>
-</div>
-  <div class="col-md-4">
-<table class="table table-condensed">
-  <thead>
-    <tr>
-      <th>Country</th>
-      <th>US$ Billion</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @import_order_countries.each do |country| %>
-      <tr>
-        <td><%= link_to country.name, country_path(country) %></td>
-        <td><%= country.us_imports %></td>
-        <td><%= link_to 'Edit', edit_country_path(country) %> |
-            <%= link_to 'Destroy', country, method: :delete %></td>
-      </tr>
-    <% end %>
-  </tbody>
-  <%= link_to 'New Country', new_country_path, id: "new_country_link", remote: true, class: "btn btn-sm btn-info" %>
-</table>
-</div>
-</div>
-<br>
-<h1>Select the country your T-shirt was made (or another country) to learn more about it</h1>
-</center>
 <br>
 <br>
-
+<%= link_to 'GUESS', new_visitor_path, id: "add_visitor_answer_link", remote: true, class: "btn btn-lg btn-info" %>
+<br>
+<br>
+<h4>You'll see everyone's results after you provide your answer.</h4>
+<h6>Please note your answers will be public</h6>
 <br>
