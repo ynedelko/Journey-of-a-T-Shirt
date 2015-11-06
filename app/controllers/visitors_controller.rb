@@ -3,11 +3,9 @@ class VisitorsController < ApplicationController
 
   # GET /visitors
   def index
-    @visitors = Visitor.order(tshirt_made: :asc).all
+    @visitors = Visitor.order(created_at: :desc).all
     @countries = Country.all
     @import_order_countries = Country.order(us_imports: :desc).all
-    @single_visitor = Visitor.recent
-    @visitors = Visitor.all
   end
 
   # GET /visitors/1
