@@ -1,16 +1,18 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
 .tables {
   display: inline;
 }
 
 .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
-  background-color: #008ED6;
+  background-color: #C0C0C0;
 }
 
 body {
   font-family: 'Josefin Slab', serif;
+  background-color: #F1F1F1;
 }
 
 .click:hover {
@@ -20,4 +22,29 @@ body {
 
 footer {
   position: absolute;
+}
+
+a {
+  color: red;
+}
+li, a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.btn {
+  color: white;
+  background-color: black;
+  border: black;
+}
+.btn:hover {
+  background-color: red;
+  border: red;
+  color: white;
+}
+
+.well {
+  border-width: thick;
+  border-color: red;
+  border-style: dotted;
 }
