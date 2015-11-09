@@ -14,9 +14,13 @@
   <br>
     <%= yield :charts_js %>
   <strong><%= flash[:notice] %></strong>
+  <br>
+  <br>
   <footer class="site-footer">
-    <strong> Journey of a T-Shirt (insert cute icon here) <%= link_to "Home", root_path %> --> <%= link_to "Start", new_home_path %> -->
+    <br>
+    <strong>(need to put some space here) Journey of a T-Shirt (insert cute icon here) <%= link_to "Home", root_path %> --> <%= link_to "Start", new_home_path %> -->
     <%= link_to "Where It Came From", countries_path %> --> <%= link_to "Your T-Shirt", visitors_path %> </strong>
+    <br>
     <%= yield(:footer) %>
     <br>
   </footer>

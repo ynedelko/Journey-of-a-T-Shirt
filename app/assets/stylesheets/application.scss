@@ -2,6 +2,27 @@
 @import "bootstrap";
 
 
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+.spin
+{
+    -webkit-animation-name:             rotate;
+    -webkit-animation-duration:         30s;
+    -webkit-animation-iteration-count:  infinite;
+    -webkit-animation-timing-function:  linear;
+}
+.click:hover {
+  -webkit-transform: scale(1.15, 1.15);
+  cursor: pointer;
+}
+
 .tables {
   display: inline;
 }
@@ -15,21 +36,17 @@ body {
   background-color: #F1F1F1;
 }
 
-.click:hover {
-  -webkit-transform: scale(1.25, 1.25);
-  cursor: pointer;
-}
-
-footer {
-  position: absolute;
-}
-
 a {
   color: red;
 }
-li, a:hover {
-  color: black;
+
+a:hover {
+  color: white;
   text-decoration: none;
+}
+
+li {
+  color: red;
 }
 
 .btn {
@@ -48,3 +65,14 @@ li, a:hover {
   border-color: red;
   border-style: dotted;
 }
+
+footer {
+  font-size: 125%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #000;
+  color: #fff;
+  display: block;
+  }
