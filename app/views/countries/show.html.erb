@@ -1,14 +1,23 @@
 <center>
-  <h1>
-    <%= @country.name %>
-  </h1>
-    <%= image_tag("#{@country.image}") %>
+  <div class="row">
+    <div class="col-md-6">
+        <div class="countryImage">
+          <center> <%= image_tag("#{@country.image}") %></center>
+        </div>
+    </div>
+    <div class="col-md-6">
+      <h1>
+        <%= @country.name %>
+      </h1>
+        <%= image_tag("#{@country.image}") %>
+    </div>
+  </div>
 </center>
 
 <div class="row">
   <div class="col-md-8">
-    <h2>Imports</h2>
-    <h2>Imports $<%= @country.us_imports %> billion worth of apparel into the United States each year.</h2>
+    <h2>Exports into US</h2>
+    <h2><%= @country.name %> exports $<%= @country.us_imports %> billion worth of apparel into the United States each year.</h2>
   </div>
   <div class="col-md-4">
   </div>
@@ -29,5 +38,3 @@
   <div class="col-md-4">
   </div>
 </div>
-<%= link_to 'Edit', edit_country_path(@country) %> |
-<%= link_to 'Back', countries_path %>

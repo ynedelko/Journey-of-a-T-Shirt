@@ -39,7 +39,9 @@
       <div class="col-md-8">
         <h2>Top 10 Countries of Apparel Imports to US</h2>
           <h2>$US in Billions - 2014</h2>
-      <%= geo_chart @countries.group(:name).sum(:us_imports), colors: ["#ff9999", "#660000"] %>
+      <div class= "map">
+        <%= geo_chart @countries.group(:name).sum(:us_imports), colors: ["#ff9999", "#660000"], library: {backgroundColor: "black"}%>
+      </div>
     </div>
       <div class="col-md-2">
       <table class="table table-condensed">
