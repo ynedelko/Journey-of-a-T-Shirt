@@ -5,14 +5,15 @@
     <h1>Guess</h1>
     <%= pie_chart Visitor.group(:guess).count, colors: ["red", "black"], library: {backgroundColor: "none"}%>
   </div>
-    <div class="col-md-6">
+  <div class="col-md-6">
   <h1>Actual</h1>
   <%= pie_chart Visitor.group(:tshirt_made).count, colors: ["#190000", "#4D0000", "#800000", "#B30000", "#E60000", "#FF1A1A", "#FF4D4D", "#FF8080", "#FFB3B3", "#FFE5E5"], library: {backgroundColor: "none"} %>
   </div>
 </div>
 <br>
-<p>MAKE THIS A HIDE/SHOW </p>
-<table class="table table-condensed">
+<button class= "btn btn-md btn-info comments">Use this button to hide the table below</button>
+
+<table class="table table-condensed comments">
   <thead>
     <tr>
       <th>Name</th>
@@ -53,26 +54,26 @@
     </div>
   </div>
     <div class="col-md-2">
-    <table class="table table-condensed">
-      <thead>
-        <tr>
-          <th>Country</th>
-          <th>US$ Billion</th>
-          <th colspan="3"></th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <% @import_order_countries.each do |country| %>
+      <table class="table table-condensed">
+        <thead>
           <tr>
-            <td><%= link_to country.name, country_path(country) %></td>
-            <td><%= country.us_imports %></td>
-            <!-- <td><%= link_to 'Edit', edit_country_path(country) %> |
-                <%= link_to 'Destroy', country, method: :delete %></td> -->
+            <th>Country</th>
+            <th>US$ Billion</th>
+            <th colspan="3"></th>
           </tr>
-        <% end %>
-      </tbody>
-    </table>
+        </thead>
+
+        <tbody>
+          <% @import_order_countries.each do |country| %>
+            <tr>
+              <td><%= link_to country.name, country_path(country) %></td>
+              <td><%= country.us_imports %></td>
+            <td><%= link_to 'Edit', edit_country_path(country) %> |
+                  <%= link_to 'Destroy', country, method: :delete %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
     <%= link_to 'New Country', new_country_path, id: "new_country_link", remote: true, class: "btn btn-xs btn-info" %>
     </div>
   </div>
@@ -83,23 +84,24 @@
   <li></li>
   <li></li>
   <div class="well well-lg">
-    <h1>Was your T-shirt made in one of the TOP exporting countries?<br>
+    <h1>
+      Was your T-shirt made in one of the TOP exporting countries?<br>
       <%= image_tag "binoculars.png", size: '150x150'%><br>
       Click to learn more about<br>
-      the country and people!</h1>
+      the country and people!
+    </h1>
       <br>
       <br>
-      <div class="row">
-        <div class="col-sm-1">
-        </div>
-        <% @import_order_countries.each do |country| %>
-        <div class="col-sm-1">
-          <%= link_to country.name, country_path(country) %><br>
-          <%= image_tag("#{country.image}", size: '75x75') %>
-        </div>
-        <% end %>
-        <div class="col-sm-1">
-        </div>
+  <div class="row">
+    <div class="col-sm-1">
     </div>
-
+      <% @import_order_countries.each do |country| %>
+    <div class="col-sm-1">
+      <%= link_to country.name, country_path(country) %><br>
+      <%= image_tag("#{country.country_image}", size: '75x75') %>
+    </div>
+      <% end %>
+    <div class="col-sm-1">
+    </div>
+  </div>
 </center>

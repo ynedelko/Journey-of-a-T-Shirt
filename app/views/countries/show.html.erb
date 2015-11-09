@@ -1,41 +1,39 @@
 <center>
+<h1>
+  <%= @country.name %> <%= image_tag("#{@country.country_image}", size: '150x150') %>
+</h1>
   <div class="row">
-    <div class="col-md-6">
-        <div class="img-responsive">
-          <%= image_tag("#{@country.image}") %>
-          <p><a href="https://google.com/">Image Source</a></p>
+    <div class="well well-lg col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <div class="caption">
+          <h1>Exports into US</h1>
+          <h3><%= @country.name %> exports $<%= @country.us_imports %> billion worth of apparel into the United States each year.</h3>
+      </div>
+    </div>
+  </div>
+    <div class="well well-lg col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <div class="caption">
+          <h1>Garment Worker Wages</h1>
+          <h3>The monthly minimum wage for  <%= @country.name %>'s garmet workers is equivalent to $<%= @country.min_wage %> US Dollars.</h3>
         </div>
+      </div>
     </div>
-    <div class="col-md-6">
-      <h1>
-        <%= @country.name %>
-      </h1>
-        <%= image_tag("#{@country.image}") %>
+    <div class="well well-lg col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <div class="caption">
+          <h1>Poverty Rate</h1>
+          <h3><%= @country.poverty %>% of <%= @country.name %>'s population lives on less than $1.90 US Dollars.</h3>
+        </div>
+      </div>
     </div>
   </div>
+  <div class="row">
+          <%= image_tag("#{@country.people_image}") %>
+          <p><a href="https://google.com/">Image Source</a></p>
+  </div>
+  <h2>Add options: explore more countries or next</h2>
 </center>
-
-<div class="row">
-  <div class="col-md-8">
-    <h2>Exports into US</h2>
-    <h2><%= @country.name %> exports $<%= @country.us_imports %> billion worth of apparel into the United States each year.</h2>
-  </div>
-  <div class="col-md-4">
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-4">
-  </div>
-  <div class="col-md-8">
-    <h2>Wages</h2>
-    <h2>The monthly minimum wage for garmet workers is equivalent to $<%= @country.min_wage %> US Dollars.</h2>
-    <h2><%= @country.poverty %>% of <%= @country.name %>'s population lives on less than $1.90 US Dollars.</h2>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-8">
-    <h2>Education</h2>
-    <h2><%= @country.education %>% of <%= @country.name %>'s population has at least a high school level education.</h2></div>
-  <div class="col-md-4">
-  </div>
-</div>
+<br>
+<br>
+<br>
