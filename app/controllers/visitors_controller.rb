@@ -6,6 +6,8 @@ class VisitorsController < ApplicationController
     @visitors = Visitor.order(created_at: :desc).all
     @countries = Country.all
     @import_order_countries = Country.order(us_imports: :desc).all
+    @single_visitor = Visitor.recent
+    @visitors = Visitor.all
   end
 
   # GET /visitors/1
@@ -16,17 +18,12 @@ class VisitorsController < ApplicationController
   def new
     @visitor = Visitor.new
     @countries = Country.all
-    @import_order_countries = Country.order(us_imports: :desc).all
-    @single_visitor = Visitor.recent
-    @visitors = Visitor.all
   end
 
   # GET /visitors/1/edit
   def edit
     @countries = Country.all
     @import_order_countries = Country.order(us_imports: :desc).all
-    @single_visitor = Visitor.recent
-    @visitors = Visitor.all
   end
 
   # POST /visitors

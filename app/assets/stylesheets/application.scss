@@ -27,10 +27,6 @@
   display: inline;
 }
 
-.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
-  background-color: #C0C0C0;
-}
-
 body {
   font-family: 'Josefin Slab', serif;
   background-color: #F1F1F1;
@@ -41,7 +37,7 @@ a {
 }
 
 a:hover {
-  color: white;
+  color: black;
   text-decoration: none;
 }
 
@@ -65,9 +61,6 @@ li {
   border-color: red;
   border-style: dotted;
 }
-.map {
-  size: 1000px;
-}
 
 footer {
   font-size: 125%;
@@ -79,7 +72,12 @@ footer {
   color: #fff;
   display: block;
   }
-  .countryImage {
-    max-width: 50px;
-    max-height: 50px;
+
+  footer a:hover {
+    color: white;
+    text-decoration: none;
   }
+
+  .img-responsive {
+    width: 100%;
+}
