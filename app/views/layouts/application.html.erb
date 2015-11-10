@@ -17,14 +17,9 @@
   <br>
   <br>
   <footer class="site-footer">
-    <br>
-    <strong>(need to put some space here) Journey of a T-Shirt (insert cute icon here) <%= link_to "Home", root_path %> -->
-    <%= link_to "Where It Came From", countries_path %> --> <%= link_to "Your T-Shirt", visitors_path %> </strong>
-    <br>
+    <h4><%= image_tag "planeL.png", size: '50x50' %> Journey of a T-Shirt <%= image_tag "planeR.png", size: '50x50' %> <%= link_to "Home", root_path %> --> <%= link_to "Take A Guess", countries_path %> --> <%= link_to "Explore A Country", visitors_path %> --> Last Days --> Learn More/Resources</h4>
     <%= yield(:footer) %>
-    <br>
   </footer>
-</div>
-
+</div
 </body>
 </html>

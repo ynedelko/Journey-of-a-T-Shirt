@@ -45,6 +45,9 @@ li {
   color: red;
 }
 
+#pop {
+  color: red;
+}
 .btn {
   color: white;
   background-color: black;
@@ -57,7 +60,7 @@ li {
 }
 
 .well {
-  border-width: thick;
+  border-width: 3.5px;
   border-color: red;
   border-style: dotted;
 }
@@ -71,6 +74,13 @@ footer {
   background: #000;
   color: #fff;
   display: block;
+  height: 10%;
+  }
+  
+  footer h4 {
+    margin-left: 4%;
+    margin-top: 2%;
+    font-weight: bold;
   }
 
   footer a:hover {

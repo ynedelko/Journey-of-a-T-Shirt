@@ -1,32 +1,27 @@
 class VisitorsController < ApplicationController
   before_action :set_visitor, only: [:show, :edit, :update, :destroy]
 
-  # GET /visitors
   def index
-    @visitors = Visitor.order(created_at: :desc).all
-    @countries = Country.all
+    @visitors_guess = Visitor.order(:guess).all
+    @visitors_tshirt_made = Visitor.order(:tshirt_made).all
+    @countries = Country.order(name: :desc).all
     @import_order_countries = Country.order(us_imports: :desc).all
     @single_visitor = Visitor.recent
-    @visitors = Visitor.all
   end
 
-  # GET /visitors/1
   def show
   end
 
-  # GET /visitors/new
   def new
     @visitor = Visitor.new
     @countries = Country.all
   end
 
-  # GET /visitors/1/edit
   def edit
     @countries = Country.all
     @import_order_countries = Country.order(us_imports: :desc).all
   end
 
-  # POST /visitors
   def create
     @visitor = Visitor.new(visitor_params)
 
@@ -37,7 +32,6 @@ class VisitorsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /visitors/1
   def update
     if @visitor.update(visitor_params)
       redirect_to visitors_path, notice: 'Thank you for your answer.'
@@ -46,20 +40,17 @@ class VisitorsController < ApplicationController
     end
   end
 
-  # DELETE /visitors/1
   def destroy
     @visitor.destroy
     redirect_to visitors_url, notice: 'Visitor was successfully destroyed.'
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_visitor
       @visitor = Visitor.find(params[:id])
     end
 
-    # Only allow a trusted parameter "white list" through.
     def visitor_params
-      params.require(:visitor).permit(:name, :comment, :guess, :tshirt_made)
+      params.require(:visitor).permit(:comment, :guess, :tshirt_made)
     end
 end

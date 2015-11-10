@@ -1,7 +1,6 @@
 class CountriesController < ApplicationController
   before_action :set_country, only: [:show, :edit, :update, :destroy]
 
-  # GET /countries
   def index
     @countries = Country.all
     @import_order_countries = Country.order(us_imports: :desc).all
@@ -9,20 +8,16 @@ class CountriesController < ApplicationController
     @visitors = Visitor.all
   end
 
-  # GET /countries/1
   def show
   end
 
-  # GET /countries/new
   def new
     @country = Country.new
   end
 
-  # GET /countries/1/edit
   def edit
   end
 
-  # POST /countries
   def create
     @country = Country.new(country_params)
 
@@ -33,7 +28,6 @@ class CountriesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /countries/1
   def update
     if @country.update(country_params)
       redirect_to @country, notice: 'Country was successfully updated.'
@@ -42,19 +36,16 @@ class CountriesController < ApplicationController
     end
   end
 
-  # DELETE /countries/1
   def destroy
     @country.destroy
-    redirect_to countries_url, notice: 'Country was successfully destroyed.'
+    redirect_to countries_url, notice: 'Country was successfully deleted.'
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_country
       @country = Country.find(params[:id])
     end
 
-    # Only allow a trusted parameter "white list" through.
     def country_params
       params.require(:country).permit(:name, :us_imports, :min_wage, :poverty, :people_image, :country_image)
     end

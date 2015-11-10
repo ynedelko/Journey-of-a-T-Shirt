@@ -3,11 +3,11 @@
 <div class="row">
   <div class="col-md-6">
     <h1>Guess</h1>
-    <%= pie_chart Visitor.group(:guess).count, colors: ["#190000", "#4D0000", "#800000", "#B30000", "#E60000", "#FF1A1A", "#FF4D4D", "#FF8080", "#FFB3B3", "#FFE5E5"], library: {backgroundColor: "none"}%>
+    <%= pie_chart @visitors_guess.group(:guess).count, colors: ["#190000", "#4D0000", "#800000", "#B30000", "#E60000", "#FF1A1A", "#FF4D4D", "#FF8080", "#FFB3B3", "#FFE5E5"], library: {backgroundColor: "none"}%>
   </div>
   <div class="col-md-6">
   <h1>Actual</h1>
-  <%= pie_chart Visitor.group(:tshirt_made).count, colors: ["#190000", "#4D0000", "#800000", "#B30000", "#E60000", "#FF1A1A", "#FF4D4D", "#FF8080", "#FFB3B3", "#FFE5E5"], library: {backgroundColor: "none"} %>
+  <%= pie_chart @visitors_tshirt_made.group(:tshirt_made).count, colors: ["#190000", "#4D0000", "#800000", "#B30000", "#E60000", "#FF1A1A", "#FF4D4D", "#FF8080", "#FFB3B3", "#FFE5E5"], library: {backgroundColor: "none"} %>
   </div>
 </div>
 <br>

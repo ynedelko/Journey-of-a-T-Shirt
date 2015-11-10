@@ -6,8 +6,9 @@
     <div class="well well-lg col-sm-6 col-md-4">
       <div class="thumbnail">
         <div class="caption">
-          <h1>Exports into US</h1>
-          <h3><%= @country.name %> exports $<%= @country.us_imports %> billion worth of apparel into the United States each year.</h3>
+          <h1>Imports / Exports</h1>
+          <%= image_tag "export.png", size: '75x75'%>
+          <h3><%= @country.name %> exports <span id="pop">$<%= @country.us_imports %></span> billion worth of apparel into the United States each year.</h3>
       </div>
     </div>
   </div>
@@ -15,7 +16,8 @@
       <div class="thumbnail">
         <div class="caption">
           <h1>Garment Worker Wages</h1>
-          <h3>The monthly minimum wage for  <%= @country.name %>'s garmet workers is equivalent to $<%= @country.min_wage %> US Dollars.</h3>
+          <%= image_tag "wages.png", size: '50x50'%>
+          <h3>The <span id="pop">monthly</span> minimum wage for  <%= @country.name %>'s garmet workers is equivalent to <span id="pop">$<%= @country.min_wage %> US</span>.</h3>
         </div>
       </div>
     </div>
@@ -23,16 +25,20 @@
       <div class="thumbnail">
         <div class="caption">
           <h1>Poverty Rate</h1>
-          <h3><%= @country.poverty %>% of <%= @country.name %>'s population lives on less than $1.90 US Dollars.</h3>
+          <%= image_tag "poverty.png", size: '100x100'%>
+          <h3><span id="pop"><%= @country.poverty %>% </span> of <%= @country.name %>'s population lives on less than <span id="pop">$1.90 US</span>.</h3>
         </div>
       </div>
     </div>
   </div>
   <div class="row">
+          <p><a href="https://google.com/">Data Source</a></p>
+  </div>
+  <div class="row">
           <%= image_tag("#{@country.people_image}") %>
           <p><a href="https://google.com/">Image Source</a></p>
   </div>
-  <h2><%= link_to "Explore more countries", visitors_path(:anchor => "countries-selection") %> | something to end this? </h2>
+  <h2><%= link_to "Explore more countries", visitors_path(:anchor => "countries-selection") %> | See where your clothes end up </h2>
 </center>
 <br>
 <br>
