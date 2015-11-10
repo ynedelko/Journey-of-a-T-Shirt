@@ -9,16 +9,12 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :name, "Name (optional)"%><br>
-    <%= f.text_field :name %>
-  </div><br>
+<h3>
   <div class="field">
     <%= f.label :guess, "Where do you think your T-shirt was made?" %><br>
     <%= f.select :guess, ['China', 'Vietnam', 'Bangladesh', 'Indonesia', 'Mexico', 'India', 'Honduras', 'Cambodia', 'El Salvador', 'Sri Lanka', 'United States', 'Second-Hand', 'Hand-Made', 'Other'] %>
   </div>
-
+</h3><br>
     <li></li>
     <li></li>
     <li></li>
@@ -28,11 +24,11 @@
     <li></li>
     <li></li>
     <li></li>
-    <li></li>
+    <li></li><br>
 
     <h1>Check your tag <%= image_tag "tag.png", size: '50x50' %></h1><br>
     <h2>Did you guess correctly?</h2><br>
-
+<h3>
   <div class="field">
     <%= f.label :tshirt_made, "Where was your T-shirt ACTUALLY made?"%><br>
     <%= f.select :tshirt_made, ['China', 'Vietnam', 'Bangladesh', 'Indonesia', 'Mexico', 'India', 'Honduras', 'Cambodia', 'El Salvador', 'Sri Lanka', 'United States', 'Second-Hand', 'Hand-Made', 'Other'] %>
@@ -44,4 +40,5 @@
   <div class="actions">
     <%= f.submit "Submit Answer", class: "btn btn-lg btn-info" %>
   </div>
+</h3>
 <% end %>
