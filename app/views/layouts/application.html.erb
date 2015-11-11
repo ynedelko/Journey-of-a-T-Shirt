@@ -17,7 +17,7 @@
   <br>
   <br>
   <footer class="site-footer">
-    <h4><%= image_tag "planeL.png", size: '50x50' %> Journey of a T-Shirt <%= image_tag "planeR.png", size: '50x50' %> <%= link_to "Home", root_path %> --> <%= link_to "Take A Guess", countries_path %> --> <%= link_to "Explore A Country", visitors_path %> --> Last Days --> Learn More/Resources</h4>
+    <h4><%= image_tag "planeL.png", size: '50x50' %> Journey of a T-Shirt <%= image_tag "planeR.png", size: '50x50' %> <%= link_to "Home", root_path %> --> <%= link_to "Take A Guess", countries_path %> --> <%= link_to "Explore A Country", visitors_path(:anchor => "countries-selection") %> --> Last Days --> Learn More/Resources</h4>
     <%= yield(:footer) %>
   </footer>
 </div

@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-  root :to => 'home#index'
+  root "pages#show", page: "home"
 
   resources :countries
-  resources :home
   resources :visitors
+  get "/pages/:page" => "pages#show", as: 'page'
 end
