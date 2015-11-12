@@ -3,11 +3,11 @@
 <div class="row">
   <div class="col-md-6">
     <h1>Guess</h1>
-    <%= pie_chart @visitors_guess.group(:guess).count, colors: ["#190000", "#660000", "#990000", "#cc0000", "#ff0000", "#ff4c4c", "#ff6666", "#ff7f7f", "#ff9999", "#ffb2b2", "#ffcccc", "#ffe5e5", "#ffffff"], library: {backgroundColor: "none"}%>
+    <%= pie_chart @visitors_guess.group(:guess).count, colors: ["#190000", "#660000", "#990000", "#cc0000", "#ff0000", "#ff3232", "#ff4c4c", "#ff6666", "#ff7f7f", "#ff9999", "#ffb2b2", "#ffcccc", "#ffe5e5"], library: {backgroundColor: "none"}%>
   </div>
   <div class="col-md-6">
   <h1>Actual</h1>
-  <%= pie_chart @visitors_tshirt_made.group(:tshirt_made).count, colors: ["#190000", "#660000", "#990000", "#cc0000", "#ff0000", "#ff4c4c", "#ff6666", "#ff7f7f", "#ff9999", "#ffb2b2", "#ffcccc", "#ffe5e5", "#ffffff"], library: {backgroundColor: "none"} %>
+  <%= pie_chart @visitors_tshirt_made.group(:tshirt_made).count, colors: ["#190000", "#660000", "#990000", "#cc0000", "#ff3232", "#ff0000", "#ff4c4c", "#ff6666", "#ff7f7f", "#ff9999", "#ffb2b2", "#ffcccc", "#ffe5e5"], library: {backgroundColor: "none"} %>
   </div>
 </div>
 <br>
@@ -19,22 +19,38 @@
 <li></li>
 <li></li>
 <br>
-
-<%= image_tag "money.png", size: '100x100' %>
 <div class="row">
-  <div class="col-md-2">
-  <h1>The US imports over <h1>
-    <strong>$80 Billion</strong>
-    <h1>of apparel EACH year.</h1>
+<div class="col-md-4">
 </div>
-    <div class="col-md-8">
+<div class="col-md-4">
+<h1>The US imports over <h1>
+  <strong>$80 Billion</strong>
+  <h1>of apparel EACH year.</h1>
+  <%= image_tag "money.png", size: '100x100' %>
+</div>
+<div class="col-md-4">
+</div>
+</div>
+<br>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+<br>
+<div class="row">
+    <div class="col-md-10">
       <h2>Top 10 Countries of Apparel Imports to US</h2>
-        <h2>$US in Billions - 2014</h2>
+      <h2>$US in Billions - 2014</h2>
     <div class= "map">
       <%= geo_chart @countries.group(:name).sum(:us_imports), colors: ["#ff9999", "#660000"], library: {backgroundColor: "black"}%>
     </div>
   </div>
     <div class="col-md-2">
+      <br>
+      <br>
       <table class="table table-condensed">
         <thead>
           <tr>
@@ -48,14 +64,14 @@
           <% @import_order_countries.each do |country| %>
             <tr>
               <td><%= link_to country.name, country_path(country) %></td>
-              <td><%= country.us_imports %></td>
-            <td><%= link_to 'Edit', edit_country_path(country) %> |
-                  <%= link_to 'Destroy', country, method: :delete %></td>
+              <td><div class="pop"><%= country.us_imports %></div></td>
+            <!-- <td><%= link_to 'Edit', edit_country_path(country) %> |
+                  <%= link_to 'Destroy', country, method: :delete %></td> -->
             </tr>
           <% end %>
         </tbody>
       </table>
-    <%= link_to 'New Country', new_country_path, id: "new_country_link", remote: true, class: "btn btn-xs btn-info" %>
+    <!-- <%= link_to 'New Country', new_country_path, id: "new_country_link", remote: true, class: "btn btn-xs btn-info" %> -->
     </div>
   </div>
   <br>
