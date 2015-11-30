@@ -32,11 +32,11 @@
     </div>
   </div>
   <div class="row">
-          <p><a href="https://google.com/">Data Source</a></p>
+          <p><%= link_to "Data Sources", page_path(:page=>'resources', :anchor => "data-sources") %></p>
   </div>
   <div class="row">
           <%= image_tag("#{@country.people_image}") %>
-          <p><a href="https://google.com/">Image Source</a></p>
+          <p><%= link_to "Image Sources", page_path(:page=>'resources', :anchor => "image-sources") %></p>
   </div>
   <h2><%= link_to "Explore more countries", visitors_path(:anchor => "countries-selection") %> | <%= link_to "See where your clothes end up", page_path(page: 'last_days') %> </h2>
 </center>
