@@ -22,9 +22,6 @@ _View App:_ to be added to Heroku
 * _Rake_
 * _Active Record_
 * _Shoulda-matchers_
-* _Devise_
-* _Factory Girl_
-* _Rails 12factor_
 * _Chartkick_
 
 
@@ -68,4 +65,4 @@ THE SOFTWARE.
 
 ### Images
 
-Images used for this app were obtained from thenounproject.com. Please see their terms of use for restrictions. https://thenounproject.com/legal/#!terms-of-use Please do not reuse icons without permission from source. Other images were found on google image search, please do not use images without permission.
+Images used for this app were obtained from thenounproject.com. Please see their terms of use for restrictions. https://thenounproject.com/legal/#!terms-of-use Please do not reuse icons without permission from source. Sources for other images can be found on the resource page. Background gradient source code can be found on Colrd: http://colrd.com/gradient/25090/.

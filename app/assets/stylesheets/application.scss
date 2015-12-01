@@ -29,7 +29,13 @@
 
 body {
   font-family: 'Josefin Slab', serif;
-  background-color: #F1F1F1;
+  background-image: linear-gradient(top, rgb(192,192,192) 0%, rgb(223,223,223) 12%, rgb(255,255,255) 20%, rgb(223,223,223) 34%, rgb(192,192,192) 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(192,192,192)), color-stop(0.1222222, rgb(223,223,223)), color-stop(0.20020252099537, rgb(255,255,255)), color-stop(0.3361111, rgb(223,223,223)), color-stop(1, rgb(192,192,192)));
+  background-image: -moz-linear-gradient(top, rgb(192,192,192) 0%, rgb(223,223,223) 12%, rgb(255,255,255) 20%, rgb(223,223,223) 34%, rgb(192,192,192) 100%);
+  background-image: -o-linear-gradient(top, rgb(192,192,192) 0%, rgb(223,223,223) 12%, rgb(255,255,255) 20%, rgb(223,223,223) 34%, rgb(192,192,192) 100%);
+  background-image: -ms-linear-gradient(top, rgb(192,192,192) 0%, rgb(223,223,223) 12%, rgb(255,255,255) 20%, rgb(223,223,223) 34%, rgb(192,192,192) 100%);
+
+
 }
 
 a {
@@ -60,15 +66,25 @@ li {
   color: white;
 }
 
+.dark-well{
+    background-color: rgba(223,223,223, 1);
+}
 .well {
   border-width: 3.5px;
   border-color: red;
   border-style: dotted;
+  background-color: rgba(108,117,127, .05);
 }
 
 .well-single {
   border-width: 3.5px;
   border-bottom: dotted red;
+}
+
+.thumbnail {
+  // background-color: rgba(108,117,127, .35);
+  background-color: rgba(192,192,192, .75);
+  border: none;
 }
 
 footer {

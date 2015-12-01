@@ -8,7 +8,7 @@
         <div class="caption">
           <h1>Imports / Exports</h1>
           <%= image_tag "export.png", size: '75x75'%>
-          <h3><%= @country.name %> exports <span class="pop">$<%= @country.us_imports %></span> billion worth of apparel into the United States each year.</h3>
+          <h3><%= @country.name %> exports <span class="pop">$<%= @country.us_imports %></span> billion of apparel to the United States each year. This makes up <span class="pop"><%= number_to_percentage((((@country.us_imports)/81)*100), precision: 1) %> of total </span>US apparel imports.</h3>
       </div>
     </div>
   </div>
@@ -26,7 +26,7 @@
         <div class="caption">
           <h1>Poverty Rate</h1>
           <%= image_tag "poverty.png", size: '100x100'%>
-          <h3><span class="pop"><%= @country.poverty %>% </span> of <%= @country.name %>'s population lives on less than <span class="pop">$1.90 US</span>.</h3>
+          <h3><span class="pop"><%= @country.poverty %>%</span> of <%= @country.name %>'s population lives on less than <span class="pop">$1.90 US</span>.</h3>
         </div>
       </div>
     </div>

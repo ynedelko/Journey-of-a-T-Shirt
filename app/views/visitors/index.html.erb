@@ -69,8 +69,8 @@
           <tr>
             <td><%= link_to country.name, country_path(country) %></td>
             <td><center><div class="pop"><%= country.us_imports %></div><center></td>
-          <!-- <td><%= link_to 'Edit', edit_country_path(country) %> |
-                <%= link_to 'Destroy', country, method: :delete %></td> -->
+            <td><%= link_to 'Edit', edit_country_path(country) %> |
+                <%= link_to 'Destroy', country, method: :delete %></td>
           </tr>
         <% end %>
       </tbody>
@@ -89,6 +89,7 @@
   <li></li>
   <li></li>
   <br>
+  <div class="dark-well">
   <div class="well well-lg", id="countries-selection">
     <h1>
       Was your T-shirt made in one of the TOP exporting countries?<br>
@@ -110,4 +111,5 @@
     <div class="col-sm-1">
     </div>
   </div>
+</div>
 </center>
