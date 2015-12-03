@@ -54,6 +54,10 @@ li {
 .pop {
   color: red;
 }
+.pop-extra {
+  font-size: 150%;
+  color: red;
+}
 
 .btn {
   color: white;
@@ -99,28 +103,25 @@ footer {
   text-decoration: none;
   }
 
-  footer h4 {
-    margin-left: 2%;
-    font-size: 125%;
-    text-decoration: none;
-  }
+footer h4 {
+  margin-left: 2%;
+  font-size: 125%;
+  text-decoration: none;
+}
 
-  footer a:hover {
-    color: white;
-    text-decoration: none;
-  }
+footer a:hover {
+  color: white;
+  text-decoration: none;
+}
 
-  .img-responsive {
-    width: 100%;
+.img-responsive {
+  width: 100%;
 }
 
 .resources a {
   color: black;
 }
 
-// .resources li {
-//   color: black;
-// }
 
 .resources a:hover {
   color: red;
