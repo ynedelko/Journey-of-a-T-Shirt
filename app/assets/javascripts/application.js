@@ -15,4 +15,4 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
-Chartkick.options[:content_for] = :charts_js
+// Chartkick.options[:content_for] = :charts_js
