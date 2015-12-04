@@ -6,20 +6,10 @@ class VisitorsController < ApplicationController
     @visitors_tshirt_made = Visitor.order(:tshirt_made).all
     @countries = Country.order(name: :desc).all
     @import_order_countries = Country.order(us_imports: :desc).all
-    @single_visitor = Visitor.recent
-  end
-
-  def show
   end
 
   def new
     @visitor = Visitor.new
-    @countries = Country.all
-  end
-
-  def edit
-    @countries = Country.all
-    @import_order_countries = Country.order(us_imports: :desc).all
   end
 
   def create

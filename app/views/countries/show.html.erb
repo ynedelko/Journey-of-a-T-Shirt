@@ -1,7 +1,10 @@
 <center>
 <h1>
-  <%= @country.name %> <%= image_tag("#{@country.country_image}", size: '150x150') %>
+  <%= @country.name %>
 </h1>
+<%= image_tag("#{@country.country_image}", size: '250x250') %>
+<br>
+<br>
   <div class="row">
     <div class="well well-lg col-sm-6 col-md-4">
       <div class="thumbnail">
@@ -17,14 +20,14 @@
         <div class="caption">
           <h1>Garment Worker Wages</h1>
           <%= image_tag "wages.png", size: '50x50'%>
-          <h3>The <span class="pop">monthly</span> minimum wage for  <%= @country.name %>'s garmet workers is equivalent to <span class="pop">$<%= @country.min_wage %> US</span>.</h3>
+          <h3>The <span class="pop">monthly</span> minimum wage for  <%= @country.name %>'s garment workers is equivalent to <span class="pop">$<%= @country.min_wage %> US</span>.</h3>
         </div>
       </div>
     </div>
     <div class="well well-lg col-sm-6 col-md-4">
       <div class="thumbnail">
         <div class="caption">
-          <h1>Poverty Rate</h1>
+          <h1>Poverty</h1>
           <%= image_tag "poverty.png", size: '100x100'%>
           <h3><span class="pop"><%= @country.poverty %>%</span> of <%= @country.name %>'s population lives on less than <span class="pop">$1.90 US</span>.</h3>
         </div>

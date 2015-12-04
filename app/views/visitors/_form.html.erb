@@ -11,8 +11,8 @@
   <% end %>
 <h3>
   <div class="field">
-    <%= f.label :guess, "Where do you think your T-shirt was made?" %><br>
-    <%= f.select :guess, ['China', 'Vietnam', 'Bangladesh', 'Indonesia', 'Mexico', 'India', 'Honduras', 'Cambodia', 'El Salvador', 'Sri Lanka', 'United States', 'Hand-Made', 'Other'] %>
+      <%= f.label :guess, "Where do you think your T-shirt was made?" %><br>
+      <%= f.select :guess, ['China', 'Vietnam', 'Bangladesh', 'Indonesia', 'Mexico', 'India', 'Honduras', 'Cambodia', 'El Salvador', 'Sri Lanka', 'United States', 'Hand-Made', 'Other'] %>
   </div>
 </h3><br>
     <li></li>
@@ -30,13 +30,9 @@
     <h2>Did you guess correctly?</h2><br>
 <h3>
   <div class="field">
-    <%= f.label :tshirt_made, "Where was your T-shirt ACTUALLY made?"%><br>
-    <%= f.select :tshirt_made, ['China', 'Vietnam', 'Bangladesh', 'Indonesia', 'Mexico', 'India', 'Honduras', 'Cambodia', 'El Salvador', 'Sri Lanka', 'United States', 'Hand-Made', 'Other'] %>
+      <%= f.label :tshirt_made, "Where was your T-shirt ACTUALLY made?"%><br>
+      <%= f.select :tshirt_made, ['China', 'Vietnam', 'Bangladesh', 'Indonesia', 'Mexico', 'India', 'Honduras', 'Cambodia', 'El Salvador', 'Sri Lanka', 'United States', 'Hand-Made', 'Other'] %>
   </div><br>
-  <!-- <div class="field">
-    <%= f.label :comment, "Comment (optional)"%><br>
-    <%= f.text_area :comment %>
-  </div> -->
   <div class="actions">
     <%= f.submit "Submit Answer", class: "btn btn-lg btn-info" %>
   </div>

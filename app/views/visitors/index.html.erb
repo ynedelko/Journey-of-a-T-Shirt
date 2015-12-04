@@ -1,15 +1,16 @@
 <center>
-<h1>Today's visitors have T-Shirts from all over the world.</h1>
+<h1>Today's visitors have T-Shirts<br>
+   from all over the world</h1>
 <br>
 <br>
 <div class="row">
   <div class="col-md-6">
-    <h1>Guess</h1>
+    <h1>Guesses Where T-shirts Where Made</h1>
     <%= pie_chart @visitors_guess.group(:guess).count, colors: ["#190000", "#660000", "#990000", "#cc0000", "#ff0000", "#ff3232", "#ff4c4c", "#ff6666", "#ff7f7f", "#ff9999", "#ffb2b2", "#ffcccc", "#ffe5e5"], library: {backgroundColor: "none"}%>
   </div>
   <div class="col-md-6">
-  <h1>Actual</h1>
-  <%= pie_chart @visitors_tshirt_made.group(:tshirt_made).count, colors: ["#190000", "#660000", "#990000", "#cc0000", "#ff3232", "#ff0000", "#ff4c4c", "#ff6666", "#ff7f7f", "#ff9999", "#ffb2b2", "#ffcccc", "#ffe5e5"], library: {backgroundColor: "none"} %>
+    <h1>Where T-shirst Were <span class= "pop">Actually</span> Made</h1>
+    <%= pie_chart @visitors_tshirt_made.group(:tshirt_made).count, colors: ["#190000", "#660000", "#990000", "#cc0000", "#ff3232", "#ff0000", "#ff4c4c", "#ff6666", "#ff7f7f", "#ff9999", "#ffb2b2", "#ffcccc", "#ffe5e5"], library: {backgroundColor: "none"} %>
   </div>
 </div>
 <br>
@@ -20,27 +21,28 @@
 <li></li>
 <li></li>
 <li></li>
+<li></li>
+<li></li>
+<li></li>
 <br>
 <div class="row">
-<div class="col-md-4">
-</div>
-<div class="col-md-4">
-<h1>The US imports over <h1>
-  <div class="pop">$80 Billion</div>
-  <h1>of apparel EACH year.</h1>
-  <%= image_tag "money.png", size: '100x100' %>
-</div>
-<div class="col-md-4">
-</div>
+  <div class="col-md-4">
+  </div>
+  <div class="col-md-4">
+    <h1>The US imports over <span class="pop">$80 Billion</span><br> of apparel EACH year.</h1>
+    <%= image_tag "money.png", size: '100x100' %>
+  </div>
+  <div class="col-md-4">
+  </div>
 </div>
 <br>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
 <br>
 <div class="row">
   <div class="col-md-12">
@@ -54,14 +56,11 @@
     </div>
   </div>
   <div class="col-md-2">
-
     <table class="table table-sm">
-
       <thead>
         <tr>
           <th><h4>Country</h4></th>
           <th><h4><strong>US$ Billion</h4></th>
-          <!-- <th colspan="3"></th> -->
         </tr>
       </thead>
       <tbody>
@@ -69,27 +68,25 @@
           <tr>
             <td><%= link_to country.name, country_path(country) %></td>
             <td><center><div class="pop"><%= country.us_imports %></div><center></td>
-            <td><%= link_to 'Edit', edit_country_path(country) %> |
-                <%= link_to 'Destroy', country, method: :delete %></td>
+            <!-- <td><%= link_to 'Edit', edit_country_path(country) %> |
+                <%= link_to 'Destroy', country, method: :delete %></td> -->
           </tr>
         <% end %>
       </tbody>
-    </center>
     </table>
-    <p><%= link_to "U.S. Department of Commerce Office of Textiles and Apparel, August 2015", page_path(:page=>'resources', :anchor => "data-sources") %></p>
+    <p><%= link_to "Source: U.S. Department of Commerce Office of Textiles and Apparel, August 2015", page_path(:page=>'resources', :anchor => "data-sources") %></p>
   </div>
-<!-- <%= link_to 'New Country', new_country_path, id: "new_country_link", remote: true, class: "btn btn-xs btn-info" %> -->
 </div>
-  <br>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <br>
-  <div class="dark-well">
+<br>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<br>
+<div class="dark-well">
   <div class="well well-lg", id="countries-selection">
     <h1>
       Was your T-shirt made in one of the TOP exporting countries?<br>
@@ -99,16 +96,17 @@
     </h1>
       <br>
       <br>
-  <div class="row">
-    <div class="col-sm-1">
-    </div>
+    <div class="row">
+      <div class="col-sm-1">
+      </div>
       <% @import_order_countries.each do |country| %>
-    <div class="col-sm-1">
-      <%= link_to country.name, country_path(country) %><br>
-      <%= image_tag("#{country.country_image}", size: '75x75') %>
-    </div>
+        <div class="col-sm-1">
+          <%= link_to country.name, country_path(country) %><br>
+          <%= image_tag("#{country.country_image}", size: '75x75') %>
+        </div>
       <% end %>
-    <div class="col-sm-1">
+      <div class="col-sm-1">
+      </div>
     </div>
   </div>
 </div>

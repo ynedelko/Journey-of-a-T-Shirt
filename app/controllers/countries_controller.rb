@@ -1,21 +1,8 @@
 class CountriesController < ApplicationController
   before_action :set_country, only: [:show, :edit, :update, :destroy]
 
-  def index
-    @countries = Country.all
-    @import_order_countries = Country.order(us_imports: :desc).all
-    @single_visitor = Visitor.recent
-    @visitors = Visitor.all
-  end
-
-  def show
-  end
-
   def new
     @country = Country.new
-  end
-
-  def edit
   end
 
   def create
